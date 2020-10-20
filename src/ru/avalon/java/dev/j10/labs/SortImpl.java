@@ -22,12 +22,8 @@ public class SortImpl implements Sort {
 				}
 			}
 		}
-        for(int i = 0; i < array.length; i++) {
-        	System.out.println(array[i].toString());
-        }
 	}
 
-	
 	@Override
 	public void sort(Comparable<Person>[] array) {
 		boolean isSorted = false;
@@ -42,9 +38,6 @@ public class SortImpl implements Sort {
 				}
 			}
 		}
-		for (int i = 0; i < array.length; i++) {
-        	System.out.println(((PersonImpl)array[i]).getPerson());
-        }
 	}
 	 
 	@Override
@@ -61,8 +54,5 @@ public class SortImpl implements Sort {
 				}
 			}
 		}
-        for(int i = 0; i < array.length; i++) {
-        	System.out.println(array[i].toString());
-        }
 	}
 }

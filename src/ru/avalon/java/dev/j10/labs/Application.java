@@ -29,11 +29,6 @@ public class Application {
 	    	persons[count] = new PersonImpl(strings[count], DateGenerator.getRandomDate(200) );
 	    }
 
-        for(int i = 0; i < persons.length; i++) {
-        	System.out.println(((PersonImpl)persons[i]).getPerson());
-        }
-	    
-
         /*
          * TODO(Студент): Проинициализируйте переменную sort
          *
@@ -90,9 +85,5 @@ public class Application {
          *    что массив отсортирован по убыванию.
          */
         sort.sort(strings, comparator);
-        
-        for(String str : strings) {
-        	System.out.println(str);
-        }
     }
 }
