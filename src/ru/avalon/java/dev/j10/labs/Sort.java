@@ -26,7 +26,7 @@ public interface Sort {
      *
      * @param array массив, подлежащий сортировке
      */
-    void sort(Comparable[] array);
+    void sort(Comparable<Person>[] array);
 
     /**
      * Выполняет сортировку массива объектов с
@@ -37,5 +37,5 @@ public interface Sort {
      * @param comparator объект, используемый для сравнения
      *                   элементов массива {@code array}
      */
-    void sort(Object[] array, Comparator comparator);
+    void sort(Object[] array, Comparator<String> comparator);
 }
