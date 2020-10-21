@@ -4,7 +4,8 @@ import java.util.Comparator;
 
 public class Application {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("deprecation")
+	public static void main(String[] args) {
         /*
          * TODO(Студент): Проинициализируйте массив strings
          *
@@ -12,8 +13,8 @@ public class Application {
          * чтобы он содержал 20 строк, расположенных не
          * по порядку.
          */
-	    String[] strings = null;
-
+	    String[] strings = {"Alex", "Joshua", "Floyd", "Oliver", "Nicholas", "Bruce", "William", "Harry", "Donald", "Bob", "Andrea", "Philip", "Ethan", "Vincent", "William", "Bill", "Benjamin", "King", "Tom", "Harry"};
+	    
 	    /*
 	     * TODO(Студент): Проинициализируйте массив persons
 	     *
@@ -22,7 +23,11 @@ public class Application {
 	     * 2. Проинициализируйте массив persons 20
 	     *    экземплярыми созданного класса.
 	     */
-	    Person[] persons = null;
+	    Person[] persons = new PersonImpl [20];
+	    
+	    for(int count = 0; count < persons.length; count++) {
+	    	persons[count] = new PersonImpl(strings[count], DateGenerator.getRandomDate(200) );
+	    }
 
         /*
          * TODO(Студент): Проинициализируйте переменную sort
@@ -32,7 +37,7 @@ public class Application {
          * 2. Проинициализируйте переменную sort экземпляром
          *    созданного класса.
          */
-        Sort sort = null;
+        Sort sort = new SortImpl();
 
         /*
          * TODO(Студент): Проинициализируйте переменную comparator
@@ -44,7 +49,7 @@ public class Application {
          * 2. Проинициализируйте переменную comparator
          *    экземпляром созданного класса.
          */
-        Comparator comparator = null;
+        Comparator<String> comparator = new ComparatorImpl();
 
         /*
          * TODO(Студент): Отсортируйте массив persons по возрастанию
